@@ -1,0 +1,448 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #160236;
+    color: whitesmoke;
+}
+
+.sup{
+    top: 0;
+    position: fixed;
+    background: rgba(33, 2, 70, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+
+.Menu{
+display: flex;
+list-style: none;
+gap: 3rem;
+justify-content: center;
+}
+
+.menulink{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 700;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menulink::after{
+    content: '' ;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: linear-gradient(90deg, #450264,#6a02c0 );
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.menulink:hover::after{
+    width: 100%;
+}
+
+.cab{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.fotoperfil{
+    width: 400px;
+    height: 400px;
+    box-shadow: 14px 13px 31px -3px rgb(94, 100, 128);
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+h1{
+    font-size: 3.5rem;
+    color: #af55f8;
+    font-weight: bold;
+    margin: 15px;
+}
+.cabparag{
+    font-size: 2rem;
+    color:aliceblue
+}
+
+.sobre{
+ padding: 6rem 2rem;
+}
+.sobretitulo{
+    font-size: 3rem;
+    color: #af55f8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sobrediv{
+ padding: 2rem;
+ max-width: 800px;
+ margin: 0 auto;
+ border-radius: 16px;
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ background: rgba(255, 255, 255, 0.05);
+}
+.sobrep{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.projeto{
+    padding: 6rem 2rem;
+}
+.projetotitulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #af55f8;
+}
+
+.projetocard:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+    
+}
+
+.projetoscaixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projeto-imagem{
+height: 200px;
+width: 100%;
+object-fit: cover;
+object-position: top;
+}
+
+.projetocard{
+ background: rgba(255, 255, 255, 0.05);
+ border-radius: 16px;
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ overflow: hidden;
+transition: all 0.5s ease;
+cursor: pointer;
+}
+.ptitulo-projeto{
+text-align: center;
+padding-bottom: 20px;
+font-weight: bold;
+
+}
+.h3projeto{
+     text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.compdiv{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Habilidades{
+height: 100%;
+width: 100%;
+object-fit: cover;
+object-position: top;
+}
+
+.compcaixa{
+overflow: visible;
+transition: all 0.5s ease;
+cursor: pointer;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;  
+}
+
+.tooltip{
+    position: absolute;
+    bottom: -35px;
+    background: #7b3fe4;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #7b3fe4 transparent;
+}
+
+.compcaixa:hover .tooltip{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.compcaixa:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+    
+}
+
+.comp{
+    padding-top: 4rem;
+    font-size: 3rem;
+    color: #af55f8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-img{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    animation: zoom 0.3s ease;
+}
+
+.fechar{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.contato{
+    padding: 6rem 2rem;
+}
+
+.contato-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #af55f8;
+}
+
+.formcontato{
+    max-width: 600px;
+    margin: 0 auto;
+     background: rgba(255, 255, 255, 0.05);
+     backdrop-filter: blur(10px);
+     padding: 2rem;
+     border: 1px solid rgba(255, 255, 255, 0.1) ;
+     border-radius: 16px;
+
+}
+
+.grupoform{
+margin-bottom: 1.5rem;
+}
+
+.texform{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    resize: none ;
+    color: white;
+
+}
+
+.texform:focus{
+    border-color: #6a02c0;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transition: all 0.5s ease;
+}
+
+.enviarmsg{
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 8rem;
+    cursor: pointer;
+    font-weight: bold; 
+    width: 100%;
+    border: none;
+    background: linear-gradient(45deg,#6a02c0, #9426ee );
+    transition: all 0.5s ease;
+}
+.enviarmsg:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(201, 199, 241, 0.2);
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;    
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, #a841fc 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, #540396 0%, transparent 20%),
+     rgba(33, 2, 70, 0.8);
+}
+
+@keyframes zoom{
+    from{ transform: scale(0.8); }
+    to{ transform: scale(1); }
+}
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    }
+    
+    @media (max-width: 1024px){
+    .fotoperfil{
+        width: 300px;
+        height: 300px;
+    }
+
+    h1{
+        font-size: 2.8rem;
+    }
+
+    .cabparag{
+        font-size: 1.5rem;
+    }
+
+    .Menu{
+        gap: 2rem;
+    }
+
+    .compdiv{
+        gap: 4rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px){
+
+    .sup{
+        padding: 1rem;
+    }
+
+    .Menu{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cab{
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    .fotoperfil{
+        width: 220px;
+        height: 220px;
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .cabparag{
+        font-size: 1.2rem;
+    }
+
+    .sobretitulo,
+    .projetotitulo,
+    .contato-titulo{
+        font-size: 2rem;
+    }
+
+    .sobrep{
+        font-size: 1.1rem;
+    }
+
+    .projetoscaixa{
+        grid-template-columns: 1fr;
+    }
+
+    .compdiv{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .Habilidades{
+        max-width: 60px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px){
+
+    .fotoperfil{
+        width: 180px;
+        height: 180px;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    .cabparag{
+        font-size: 1rem;
+    }
+
+    .comp{
+        font-size: 2rem;
+    }
+
+    .compdiv{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formcontato{
+        padding: 1.2rem;
+    }
+}
