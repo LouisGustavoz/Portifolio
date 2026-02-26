@@ -136,6 +136,22 @@ object-fit: cover;
 object-position: top;
 }
 
+
+.projeto-video{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 3/ 4;
+    height: auto;
+}
+.projeto-video2{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 3 / 4;
+    height: auto;
+}
+
 .projetocard{
  background: rgba(255, 255, 255, 0.05);
  border-radius: 16px;
@@ -143,8 +159,27 @@ object-position: top;
  border: 1px solid rgba(255, 255, 255, 0.1);
  overflow: hidden;
 transition: all 0.5s ease;
-cursor: pointer;
+cursor: pointer;  
+}   
+
+.projetocard-video{
+ background: rgba(255, 255, 255, 0.05);
+ border-radius: 16px;
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ overflow: hidden;
+ transition: all 0.5s ease;
+ cursor: pointer;
+max-width: 250px; 
+margin: 0 auto;
 }
+
+.projetocard-video:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+    
+}
+
 .ptitulo-projeto{
 text-align: center;
 padding-bottom: 20px;
@@ -325,6 +360,15 @@ margin-bottom: 1.5rem;
     radial-gradient(circle at 10% 20%, #a841fc 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, #540396 0%, transparent 20%),
      rgba(33, 2, 70, 0.8);
+}
+
+.modal-video-conteudo {
+    max-width: 480px;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    animation: zoom 0.3s ease;
 }
 
 @keyframes zoom{
