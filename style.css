@@ -545,7 +545,27 @@ outline: 3px solid #8B5CF6;
     .contato-subtitle {
         font-size: 1rem;
     }
+
+    .sobremim-section{
+        justify-content: left;
+    }
+
+    .sobremim-texto h1{
+    font-size: 2.5rem;
+    text-align: left;
+    
+    
 }
+    .sobremim-texto h2{
+    font-size: 1.5rem;
+    text-align: left;  
+}
+.foguete{
+    height: 30%;
+    top: 5%;
+}  
+}
+
 
 @media (max-width: 480px) {
     .home-title {
@@ -564,4 +584,16 @@ outline: 3px solid #8B5CF6;
         font-size: 0.9rem;
         padding: 0.4rem 1rem;
     }
+     .sobremim-texto h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    
+    
+}
+    .sobremim-texto h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    
+    
+}
 }
