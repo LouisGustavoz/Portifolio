@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Luis Gustavo - Portfólio</title>
     <link rel="stylesheet" href="style.css">
@@ -48,7 +49,7 @@
  <!-- SEÇÃO SOBRE MIM -->
 
     <section id="sobremim" class="section sobremim-section">
-        <img src="img/eu.png" alt="eu" class="luis">
+        <img src="/img/eu.png" alt="eu" class="luis">
         <div class="sobremim-texto">
         <h1>Olá! Meu nome é <br>Luis Gustavo.</h1>
         <h2>Sou um entusiasta na arte da criação e do Desenvolvimento WEB,<br> tenho experiência em Design Gráfico há mais de 3 anos e experiência em desenvolvimento há 1 ano.<br>
@@ -72,6 +73,11 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
     </div>
 </div>
 
+<div class="modal-overlay" id="modalVideo">
+    <span class="fechar" onclick="fecharModalVideo()">&times;</span>
+    <video class="modal-video-conteudo" id="videoModal" controls></video>
+</div>
+
     <!-- SEÇÃO TRABALHOS -->
 
     <div id="modal" class="modal-overlay" onclick="closeModal()">
@@ -87,7 +93,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/beleza.png'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/fb/09/H1VRptGI_o.png'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/beleza.png" alt="Projeto 1">
                 </div>
@@ -97,7 +103,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
 
             <!-- Portfolio Item 2 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/food system.png'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/d2/af/RgJphaIN_o.png'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/food system.png" alt="Projeto 2">
                 </div>
@@ -107,7 +113,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
 
             <!-- Portfolio Item 3 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/matriculas.jpg'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/16/15/sZsn2LYs_o.jpg'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/matriculas.jpg" alt="Projeto 3">
                 </div>
@@ -117,7 +123,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
 
             <!-- Portfolio Item 4 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/petshop/Prancheta 1.png', 'img/petshop/Prancheta 2.png'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/b9/4d/6FRfCPMq_o.png', 'https://images2.imgbox.com/d7/14/RH7h9jkv_o.png'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/petshop/Prancheta 1.png" alt="Projeto 4">
                 </div>
@@ -127,7 +133,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
 
             <!-- Portfolio Item 5 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/ultra 3 2.0.png'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/b0/0c/6ia6HzWm_o.png'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/ultra 3 2.0.png" alt="Projeto 5">
                 </div>
@@ -137,7 +143,7 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
 
             <!-- Portfolio Item 6 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" onclick="openModal(['img/mungunzá.png'])">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/10/25/nReImtIr_o.png'])">
                     <div class="preview-overlay">Clique</div>
                     <img src="img/mungunzá.png" alt="Projeto 6">
                 </div>
@@ -146,15 +152,76 @@ Atualmente estou em fase de aprendizado em UX/UI.</h2>
             </div>
             <!-- Portfolio Item 7 -->
              <div class="portfolio-item">
-             <div class="portfolio-image" onclick="openModal(['img/neymar/neymar_01.png', 'img/neymar/neymar_02.png', 'img/neymar/neymar_03.png', 'img/neymar/neymar_04.png'])">
+             <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/53/95/RXRvhKo6_o.png', 'https://images2.imgbox.com/9b/1c/fs4Oqn1B_o.png', 'https://images2.imgbox.com/ef/3e/ugMshUkR_o.png', 'https://images2.imgbox.com/73/3b/MizGkuAB_o.png'])">
              <div class="preview-overlay">Clique</div>
                 <img src="img/neymar/neymar_01.png" alt="Neymar">
                 </div>
                 <h3 class="portfolio-title">Neymar Junior - Carrossel</h3>
                 <p class="portfolio-year">2026</p>
                 </div>
+                 <!-- Portfolio Item 8 -->
+             <div class="portfolio-item">
+             <div class="portfolio-image" onclick="openModal(['img/CONTROLE-DE-ESTOQUE_01.png', 'img/CONTROLE-DE-ESTOQUE_02.png', 'img/CONTROLE-DE-ESTOQUE_03.png', 'img/CONTROLE-DE-ESTOQUE_04.png'])">
+             <div class="preview-overlay">Clique</div>
+                <img src="img/CONTROLE-DE-ESTOQUE_01.png" alt="System">
                 </div>
-            </section>
+                <h3 class="portfolio-title">Sistema de Controle de Estoque - Carrossel</h3>
+                <p class="portfolio-year">2026</p>
+                </div>
+                 <!-- Portfolio Item 9 -->
+                <div class="portfolio-item">
+                <div class="portfolio-image" onclick="openModal(['https://images2.imgbox.com/b9/11/ZlENbRaX_o.png'])">
+                    <div class="preview-overlay">Clique</div>
+                    <img src="img/INSPIRANET.png" alt="Projeto 9">
+                </div>
+                <h3 class="portfolio-title">INSPIRANET - Social Media</h3>
+                <p class="portfolio-year">2026</p>
+                </div>
+                 </div>
+
+                 <P class="p-port"> VÍDEOS</P>
+
+                 <div class="portfolio-grid">
+
+                  <!-- Portfolio Item 10 -->
+                     <div class="portfolio-item">
+                    <div class="portfolio-image" onclick="abrirModalVideo('./vid/lv_0_20260225195210.mp4')">
+                    <div class="preview-overlay">Clique</div>   
+                     <video class="projeto-video2" muted playsinline preload="metadata">
+                     <source src="./vid/lv_0_20260225195210.mp4" type="video/mp4">
+                     </video>
+                        </div>
+                <h3 class="portfolio-title">Motion Design - Comida Cultural</h3>
+                <p class="portfolio-year">2026</p>
+                    </div>
+
+                 <!-- Portfolio Item 11 -->
+                    <div class="portfolio-item">
+                    <div class="portfolio-image" onclick="abrirModalVideo('./vid/lv_0_20260407124557.mp4')">
+                    <div class="preview-overlay">Clique</div>
+                     <video class="projeto-video2" muted playsinline preload="metadata">
+                     <source src="./vid/lv_0_20260407124557.mp4" type="video/mp4">
+                     </video>
+                        </div>
+                        <h3 class="portfolio-title">Criativo IA - Provedora Ultra Live</h3>
+                         <p class="portfolio-year">2026</p>
+                          </div>
+
+                          <!-- Portfolio Item 12 -->
+                    <div class="portfolio-item">
+                    <div class="portfolio-image" onclick="abrirModalVideo('./vid/lv_0_20260409174724.mp4')">
+                    <div class="preview-overlay">Clique</div>
+                     <video class="projeto-video2" muted playsinline preload="metadata">
+                     <source src="./vid/lv_0_20260409174724.mp4" type="video/mp4">
+                     </video>
+                        </div>
+                        <h3 class="portfolio-title">Clipe Motivacional - Cinemático</h3>
+                         <p class="portfolio-year">2026</p>
+                          </div>
+
+                       </div>
+                         </div>
+                             </section>
 
     <!-- SEÇÃO CONTATO -->
     <section id="contato" class="section contato-section">
