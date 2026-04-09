@@ -39,6 +39,7 @@ body {
 .home-section {
     flex-direction: column;
     position: relative;
+    min-height: 100vh;
 }
 
 .home-content {
@@ -363,6 +364,19 @@ justify-content: flex-end;
     padding: 6rem 2rem;
     min-height: auto;
     background: linear-gradient( #2e313a, #8B5CF6);
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.p-port {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 3px;
+    padding: 1rem 0 0 0;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .portfolio-grid {
@@ -430,6 +444,56 @@ outline: 3px solid #8B5CF6;
     font-size: 0.9rem;
     color: var(--light-gray);
     font-weight: 300;
+}
+
+.projeto-video2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+#modalVideo {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalVideo.active {
+    display: flex;
+}
+
+.fechar {
+    position: fixed;   /* fixed, não absolute */
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10001;    /* maior que o modal */
+    line-height: 1;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fechar:hover {
+    background: #8B5CF6;
+}
+
+.modal-video-conteudo {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
 }
 
 /* CONTATO SECTION */
@@ -564,6 +628,9 @@ outline: 3px solid #8B5CF6;
     height: 30%;
     top: 5%;
 }  
+.luis{
+    justify-items: right;
+}
 }
 
 
