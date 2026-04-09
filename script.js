@@ -99,3 +99,26 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') changeSlide(1);
     if (e.key === 'ArrowLeft') changeSlide(-1);
 });
+
+function abrirModalVideo(src) {
+    const modal = document.getElementById("modalVideo");
+    const modalVideo = document.getElementById("videoModal");
+    modalVideo.src = src;
+    modal.style.display = "flex";
+    modalVideo.play();
+}
+
+
+function fecharModalVideo() {
+    const modal = document.getElementById("modalVideo");
+    const modalVideo = document.getElementById("videoModal");
+    modalVideo.pause();
+    modalVideo.src = "";
+    modal.style.display = "none";
+}
+
+document.getElementById("modalVideo").addEventListener("click", function(e) {
+    if (e.target.classList.contains("modal-img")) {
+        fecharModalVideo();
+    }
+});
